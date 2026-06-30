@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forge — Build Real Skills, Not Just Watch Tutorials</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28">
+            <path d="M4 22 L16 4 L28 22 L22 22 L16 12 L10 22 Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo-text">Forge</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="site-nav">
+        <a href="#tracks">Tracks</a>
+        <a href="#how">How it works</a>
+        <a href="#tracker">Build Tracker</a>
+        <a href="#proof">Outcomes</a>
+        <a href="#" class="nav-cta">Start building</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">02,847 builds shipped this quarter</p>
+        <h1>
+          Tutorials teach you<br />
+          to copy. <span class="ember-underline">We teach you to build.</span>
+        </h1>
+        <p class="hero-sub">
+          Forge is a project-based track for people done watching and ready to ship.
+          Every lesson ends with working code in a real repo — not a checklist of videos watched.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary">
+            <span class="btn-label">Start your first build</span>
+            <span class="spark" aria-hidden="true"></span>
+          </a>
+          <a href="#tracks" class="btn btn-ghost">See the tracks ↓</a>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-item"><strong>6</strong><span>live build tracks</span></div>
+          <div class="meta-item"><strong>1:1</strong><span>code review, every project</span></div>
+          <div class="meta-item"><strong>0</strong><span>filler lectures</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 420" class="anvil-art">
+          <rect x="40" y="300" width="340" height="22" rx="4" class="anvil-base"/>
+          <path d="M90 300 L120 220 L300 220 L330 300 Z" class="anvil-body"/>
+          <rect x="160" y="170" width="100" height="55" rx="6" class="anvil-top"/>
+          <g class="sparks">
+            <circle cx="270" cy="150" r="3"/>
+            <circle cx="300" cy="130" r="2"/>
+            <circle cx="245" cy="120" r="2.5"/>
+            <circle cx="320" cy="170" r="2"/>
+            <circle cx="285" cy="100" r="1.8"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRACKS ===== -->
+  <section class="tracks" id="tracks">
+    <h2>Pick a track. Ship something real.</h2>
+    <div class="track-grid">
+      <article class="track-card">
+        <span class="track-tag">FRONTEND</span>
+        <h3>Interface Build</h3>
+        <p>Responsive layouts, component systems, and the CSS that actually holds up on mobile.</p>
+      </article>
+      <article class="track-card">
+        <span class="track-tag">BACKEND</span>
+        <h3>API & Data</h3>
+        <p>Design schemas, write endpoints, and ship an API that real frontends can depend on.</p>
+      </article>
+      <article class="track-card">
+        <span class="track-tag">FULL STACK</span>
+        <h3>Shipped Product</h3>
+        <p>Take one idea from blank repo to deployed app, end to end, in six weeks.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how" id="how">
+    <div class="how-inner">
+      <div class="how-copy">
+        <h2>No videos to fall asleep to.</h2>
+        <p>Forge runs on a simple loop: read the brief, build the thing, get reviewed by someone who's shipped it before. Repeat until it's good.</p>
+      </div>
+      <ol class="how-steps">
+        <li><span class="step-mark">Brief</span>You get a real spec, not a vague prompt.</li>
+        <li><span class="step-mark">Build</span>You write the code, alone, with docs and a mentor on call.</li>
+        <li><span class="step-mark">Review</span>A working engineer reviews your repo like a teammate would.</li>
+        <li><span class="step-mark">Ship</span>It goes live. It goes in your portfolio. You move on.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== BUILD TRACKER (Task 2: To-Do List, vanilla JS) ===== -->
+  <section class="tracker" id="tracker">
+  <div class="tracker-inner">
+
+    <div class="tracker-intro">
+      <span class="eyebrow">Track your progress</span>
+      <h2>Project Dashboard</h2>
+      <p class="tracker-sub">
+        Plan, track and complete every milestone of your project.
+        Stay organized and ship with confidence.
+      </p>
+    </div>
+
+    <div class="tracker-card">
+
+      <!-- Add Task -->
+      <form id="task-form" class="task-form" novalidate>
+        <input
+          type="text"
+          id="task-input"
+          class="task-input"
+          placeholder="What are you building next?"
+          autocomplete="off"
+        />
+
+        <button type="submit" class="btn btn-primary task-add-btn">
+          Add Task
+        </button>
+      </form>
+
+      <p id="task-error" class="task-error"></p>
+
+      <!-- Progress -->
+      <div class="progress-section">
+
+        <div class="progress-header">
+          <span>Project Progress</span>
+          <span id="progress-percent">0%</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+      </div>
+
+      <!-- Statistics -->
+
+      <div class="task-stats">
+
+        <div class="stat-item">
+          <strong id="stat-total">0</strong>
+          <span>Total</span>
+        </div>
+
+        <div class="stat-item">
+          <strong id="stat-completed">0</strong>
+          <span>Completed</span>
+        </div>
+
+        <div class="stat-item">
+          <strong id="stat-pending">0</strong>
+          <span>Pending</span>
+        </div>
+
+      </div>
+
+      <!-- Actions -->
+
+      <div class="tracker-actions">
+
+        <button id="clear-completed" class="clear-btn">
+          Clear Completed
+        </button>
+
+      </div>
+
+      <!-- Task List -->
+
+      <ul id="task-list" class="task-list"></ul>
+
+      <p id="task-empty" class="task-empty">
+         Ready to build?
+        <br><br>
+        Add your first project task and start shipping.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+      
+
+  <!-- ===== PROOF ===== -->
+  <section class="proof" id="proof">
+    <blockquote>
+      "I stopped collecting certificates and started collecting repos people actually wanted to look at."
+      <cite>— Priya N., Frontend Track graduate</cite>
+    </blockquote>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="22" height="22">
+            <path d="M4 22 L16 4 L28 22 L22 22 L16 12 L10 22 Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo-text">Forge</span>
+      </div>
+
+      <nav class="footer-links">
+        <a href="#tracks">Tracks</a>
+        <a href="#how">How it works</a>
+        <a href="#tracker">Build Tracker</a>
+        <a href="#proof">Outcomes</a>
+      </nav>
+
+      <div class="footer-social">
+        <a href="#" aria-label="Forge on GitHub">GitHub</a>
+        <a href="#" aria-label="Forge on Twitter / X">Twitter</a>
+        <a href="#" aria-label="Forge on LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+    <p class="footer-fine">© 2026 Forge. Built, not watched.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
